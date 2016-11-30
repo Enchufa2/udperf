@@ -7,6 +7,10 @@ A kind of UDP-only `iperf`, but more versatile and with advanced features:
 - CPU performance counters reporting
 - Run with a specified maximum latency
 
+It was used, among other tools, in this work:
+
+> I. Ucar, A. Azcorra, __Deseeding Energy Consumption of Network Stacks__, _2015 IEEE 1st International Forum on Research and Technologies for Society and Industry Leveraging a better tomorrow (RTSI)_, 16-18 Sept. 2015. [DOI: 10.1109/RTSI.2015.7325085](http://doi.org/10.1109/RTSI.2015.7325085)
+
 ## Compilation
 
 ```bash
