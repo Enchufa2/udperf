@@ -24,7 +24,7 @@ AC_CHECK_FUNCS([gettimeofday],, [AC_MSG_ERROR([gettimeofday required])])
 AC_CHECK_FUNCS([memset],, [AC_MSG_ERROR([memset required])])
 AC_CHECK_FUNCS([socket],, [AC_MSG_ERROR([socket required])])
 AC_CHECK_FUNCS([strtoul],, [AC_MSG_ERROR([strtoul required])])
-AC_FUNC_MALLOC
+AC_CHECK_FUNCS([malloc],, [AC_MSG_ERROR([malloc required])])
 
 # Defines
 AC_ARG_ENABLE([cpu-counters],

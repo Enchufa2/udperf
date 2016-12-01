@@ -13,9 +13,27 @@ It was used, among other tools, in this work:
 
 ## Compilation
 
+### For Linux
+
 ```bash
 autoreconf --install
 ./configure --enable-cpu-counters --enable-dma-latency
+make
+```
+
+### For Android
+
+Substitute `NDK` for the location of the downloaded Android NDK, and put the
+standalone `ANDROID_TOOLCHAIN` wherever you want.
+
+```bash
+export ANDROID_TOOLCHAIN=/tmp/my-android-toolchain
+$NDK/build/tools/make_standalone_toolchain.py \
+    --arch arm --api 24 --install-dir $ANDROID_TOOLCHAIN
+export PATH=$ANDROID_TOOLCHAIN/bin:$PATH
+export AM_CFLAGS="-fPIE -pie"
+autoreconf --install
+./configure --host=arm-linux-androideabi
 make
 ```
 
